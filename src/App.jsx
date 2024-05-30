@@ -15,7 +15,7 @@ function App() {
         <SideBar/>
         <Routes>
           <Route path='/' element={<TaskList /> } />
-          <Route path='/' element={<TaskList /> } />
+          {/* <Route path='/taskDetail/:taskId' element={<TaskDetail /> } /> */}
         </Routes> 
       </div>
       <Footer/>
