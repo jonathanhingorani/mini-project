@@ -2,17 +2,26 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/NavBar.jsx';
 import TaskList from './components/TaskList';
+import { Routes, Route } from "react-router-dom";
+import SideBar from './components/SideBar.jsx';
+import Footer from './components/Footer.jsx';
+
 
 function App() {
   return (
-    <div>
+    <>
       <Navbar />
-      <div className="content">
-        <h1 className="page-title">Page Title</h1>
-        <p className="read-the-docs">WE SHOULD DO A TO-DO LIST APP</p>
-        <TaskList />
+      <div>
+        <SideBar/>
+        <Routes>
+          <Route path='/' element={<TaskList /> } />
+          <Route path='/' element={<TaskList /> } />
+        </Routes> 
       </div>
-    </div>
+      <Footer/>
+    </>
+    
+    
   );
 }
 
