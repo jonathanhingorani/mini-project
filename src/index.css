@@ -27,7 +27,6 @@ h1 {
 .navbar-logo {
   width: 40px;
   height: 40px;
-  background-image: url(./assets/Hamburger.jpg);
   background-size: cover; 
   background-position: center;
   margin-right: 0.5rem;
@@ -36,7 +35,6 @@ h1 {
 .hamburger-icon {
   width: 40px;
   height: 40px;
-  background-image: url(./assets/pencil.jpeg);
   background-size: cover;
   background-position: center;
   margin-left: auto; 

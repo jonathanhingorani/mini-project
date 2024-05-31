@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/NavBar.jsx';
+import Navbar from './components/Navbar';
 import TaskList from './components/TaskList';
 import { Routes, Route } from "react-router-dom";
 import SideBar from './components/SideBar.jsx';

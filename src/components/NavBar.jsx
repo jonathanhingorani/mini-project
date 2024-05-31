@@ -1,23 +1,16 @@
 import React from 'react';
+import logo from '../assets/pencil.jpeg';
+import hamburger from '../assets/Hamburger.jpg';
 
-/*function Navbar () {
-  return (
-    <nav>
-      <p>React - Components & props</p>
-    </nav>
-  );
-}
- 
-export default Navbar;
-
-*/
-
-
-const Navbar = () => {
+const Navbar = ({ toggleSidebar }) => {
   return (
     <nav className="navbar">
-      <div className="navbar-logo"></div>
-      <div className="hamburger-icon"></div>
+      <div className="navbar-logo">
+        <img src={logo} style={{ height: "40px" }} alt="Logo" />
+      </div>
+      <div className="hamburger-icon" onClick={toggleSidebar}>
+        <img src={hamburger} style={{ height: "40px" }} alt="Menu" />
+      </div>
     </nav>
   );
 };

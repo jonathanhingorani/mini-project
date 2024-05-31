@@ -4,6 +4,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer className="footer">
+      <p><a href='https://github.com/jonathanhingorani/mini-project'>Repository</a></p>
     </footer>
   );
 };
