@@ -1,12 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const ListItem = ({ task, onDelete }) => {
+const TaskItem = ({ task }) => {
   return (
     <div className="task-item">
-      <span>{task.task}</span>
-      <button onClick={() => onDelete(task.task)}>Delete</button>
+      <Link to={`/details/${encodeURIComponent(task.task)}`}>
+        <span>{task.task}</span>
+      </Link>
     </div>
   );
 };
 
-export default ListItem;
+export default TaskItem;
