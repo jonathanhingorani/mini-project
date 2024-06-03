@@ -1,10 +1,14 @@
-import React from 'react';
+import React from "react";
 
 // Define the Footer component
 const Footer = () => {
   return (
     <footer className="footer">
-      <p><a href='https://github.com/jonathanhingorani/mini-project'>Repository</a></p>
+      <p>
+        <a href="https://github.com/jonathanhingorani/mini-project">
+          Repository
+        </a>
+      </p>
     </footer>
   );
 };
