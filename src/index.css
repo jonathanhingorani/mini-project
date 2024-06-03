@@ -1,24 +1,23 @@
-
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #dad3be;
 }
 
 h1 {
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 3.2em;
   line-height: 1.1;
   color: rgb(170, 33, 33);
 }
 
-
-
-
 .navbar {
   display: flex;
   align-items: center;
+  height: 8vh;
+  width: 100%;
   padding: 1rem;
   background-color: #0a47c0;
   color: rgb(223, 21, 21);
@@ -27,7 +26,7 @@ h1 {
 .navbar-logo {
   width: 40px;
   height: 40px;
-  background-size: cover; 
+  background-size: cover;
   background-position: center;
   margin-right: 0.5rem;
 }
@@ -37,5 +36,6 @@ h1 {
   height: 40px;
   background-size: cover;
   background-position: center;
-  margin-left: auto; 
+  margin-left: auto;
+  cursor: pointer;
 }
