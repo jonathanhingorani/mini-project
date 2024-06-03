@@ -1,22 +1,22 @@
-import { useState } from "react";
-import taskListData from "../assets/tasks.json";
-import React from "react";
+import React, { useState } from "react";
+import tasksData from "../assets/tasks.json";
 
 const TaskList = () => {
-  console.log("here is the data", taskListData);
-  const [task, setTask] = useState(taskListData);
+  const [tasks, setTasks] = useState(tasksData);
+
+  const handleDelete = (taskToDelete) => {
+    const updatedTasks = tasks.filter((task) => task.task !== taskToDelete);
+    setTasks(updatedTasks);
+  };
 
   return (
-    <div>
-      TaskList
-      {task.map((oneTask) => {
-        return (
-          <div>
-            <h4>{oneTask.task}</h4>
-            {oneTask.completed ? "completed" : "not completed"}
-          </div>
-        );
-      })}
+    <div className="task-list">
+      {tasks.map((task, index) => (
+        <div key={index} className="task-item">
+          <span>{task.task}</span>
+          <button onClick={() => handleDelete(task.task)}>Delete</button>
+        </div>
+      ))}
     </div>
   );
 };

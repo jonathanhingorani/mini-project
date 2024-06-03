@@ -1,27 +1,30 @@
-import React from 'react';
-import './App.css';
-import Navbar from './components/Navbar';
-import TaskList from './components/TaskList';
+import React from "react";
+import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import SideBar from './components/SideBar.jsx';
-import Footer from './components/Footer.jsx';
-
+import Navbar from "./components/Navbar.jsx";
+import TaskList from "./components/TaskList.jsx";
+import SideBar from "./components/SideBar.jsx";
+import Footer from "./components/Footer.jsx";
+import DashboardPage from "./pages/DashboardPage.jsx";
+import AboutPage from "./pages/AboutPage.jsx";
+import TaskDetailsPage from "./pages/TaskDetailsPage.jsx";
+import NotFoundPage from "./pages/NotFoundPage.jsx";
 
 function App() {
   return (
     <>
       <Navbar />
+      <SideBar />
       <div>
-        <SideBar/>
         <Routes>
-          <Route path='/' element={<TaskList /> } />
-          {/* <Route path='/taskDetail/:taskId' element={<TaskDetail /> } /> */}
-        </Routes> 
+          <Route path="/" element={<DashboardPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/details/:taskId" element={<TaskDetailsPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
       </div>
-      <Footer/>
+      <Footer />
     </>
-    
-    
   );
 }
 
