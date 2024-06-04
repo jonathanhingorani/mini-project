@@ -1,11 +1,18 @@
 import React from "react";
-import TaskItem from "../components/TaskItem";
+import { useParams } from "react-router-dom";
 
-const TaskDetailsPage = () => {
+const TaskDetailsPage = ({ tasks }) => {
+  const { taskId } = useParams();
+  const task = tasks.find((task) => task.id === parseInt(taskId));
+
+  if (!task) {
+    return <h2>Task not found</h2>;
+  }
+
   return (
-    <div>
-      <h1>Task Details</h1>
-      <TaskItem />
+    <div className="task-details">
+      <h1>{task.title}</h1>
+      <p>{task.description}</p>
     </div>
   );
 };

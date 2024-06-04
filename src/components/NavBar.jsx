@@ -1,6 +1,6 @@
-import React from 'react';
-import logo from '../assets/pencil.jpeg';
-import hamburger from '../assets/Hamburger.jpg';
+import React from "react";
+import logo from "../assets/pencil.jpeg";
+import hamburger from "../assets/Hamburger.jpg";
 
 const Navbar = ({ toggleSidebar }) => {
   return (

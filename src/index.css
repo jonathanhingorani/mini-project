@@ -1,41 +1,42 @@
 body {
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: #dad3be;
 }
 
 h1 {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 3.2em;
+  font-size: 2rem;
   line-height: 1.1;
   color: rgb(170, 33, 33);
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.navbar {
-  display: flex;
-  align-items: center;
-  height: 8vh;
-  width: 100%;
-  padding: 1rem;
-  background-color: #0a47c0;
-  color: rgb(223, 21, 21);
-}
-
-.navbar-logo {
-  width: 40px;
-  height: 40px;
-  background-size: cover;
-  background-position: center;
-  margin-right: 0.5rem;
-}
-
-.hamburger-icon {
-  width: 40px;
-  height: 40px;
-  background-size: cover;
-  background-position: center;
-  margin-left: auto;
+button {
+  padding: 10px;
+  font-size: 1rem;
+  margin: 5px;
   cursor: pointer;
+}
+
+input {
+  padding: 10px;
+  margin: 5px;
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+form {
+  margin: 20px;
+}
+
+#main {
+  background-color: #f3f3f3;
+  padding: 20px;
+  border-radius: 8px;
 }

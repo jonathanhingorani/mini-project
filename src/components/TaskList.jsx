@@ -1,21 +1,16 @@
-import React, { useState } from "react";
-import tasksData from "../assets/tasks.json";
+import React from "react";
+import TaskItem from "./TaskItem";
 
-const TaskList = () => {
-  const [tasks, setTasks] = useState(tasksData);
-
-  const handleDelete = (taskToDelete) => {
-    const updatedTasks = tasks.filter((task) => task.task !== taskToDelete);
+const TaskList = ({ tasks, setTasks }) => {
+  const handleDelete = (taskId) => {
+    const updatedTasks = tasks.filter((task) => task.id !== taskId);
     setTasks(updatedTasks);
   };
 
   return (
     <div className="task-list">
-      {tasks.map((task, index) => (
-        <div key={index} className="task-item">
-          <span>{task.task}</span>
-          <button onClick={() => handleDelete(task.task)}>Delete</button>
-        </div>
+      {tasks.map((task) => (
+        <TaskItem key={task.id} task={task} onDelete={handleDelete} />
       ))}
     </div>
   );

@@ -2,12 +2,12 @@ import React from "react";
 import TaskList from "../components/TaskList";
 import TaskForm from "../components/TaskForm";
 
-const DashboardPage = () => {
+const DashboardPage = ({ tasks, setTasks }) => {
   return (
     <div id="main">
       <h1>Task Dashboard</h1>
-      <TaskList />
-      <TaskForm />
+      <TaskForm tasks={tasks} setTasks={setTasks} />
+      <TaskList tasks={tasks} setTasks={setTasks} />
     </div>
   );
 };
