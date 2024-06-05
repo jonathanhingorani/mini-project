@@ -14,6 +14,11 @@
 }
 .footer {
   height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333; /* Add background color */
+  color: #fff; /* Add text color */
 }
 
 .footer a {
@@ -29,20 +34,56 @@
 
 .sidebar {
   background-color: #36f97a;
-  height: 82vh;
+  height: 100vh; /* Adjust height to fill the full viewport */
   width: 200px;
+  padding-top: 20px; /* Add top padding */
 }
+
 .sidebar ul {
   list-style-type: none;
   padding: 0;
 }
+
 .sidebar ul li {
-  margin: 1em 0;
+  margin: 10px 0; /* Adjust margin */
 }
+
 .sidebar ul li a {
   text-decoration: none;
   color: #333;
+  display: block;
+  padding: 10px 20px; /* Adjust padding */
+  border-radius: 5px; /* Add border radius */
+  transition: background-color 0.3s ease; /* Add transition effect */
 }
-.task-list {
-  margin: 2em;
+
+.sidebar ul li a:hover {
+  background-color: #2cb67d; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+.sidebar ul li.active a {
+  background-color: #2cb67d; /* Change background color for active item */
+  color: #fff; /* Change text color for active item */
+}
+
+.sidebar-heading {
+  font-size: 1.2rem; /* Adjust font size */
+  font-weight: bold; /* Add font weight */
+  padding: 10px 20px; /* Adjust padding */
+  color: #fff; /* Change text color */
+}
+.app-container {
+  display: flex;
+  min-height: 100vh; /* Ensure full height of viewport */
+}
+
+.main-content {
+  flex: 1; /* Take up remaining space */
+  background-color: #8b3333;
+  padding: 20px; /* Add padding for spacing */
+  overflow-y: auto; /* Enable scrolling if content overflows */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
 }
